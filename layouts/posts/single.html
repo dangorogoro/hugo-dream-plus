@@ -19,6 +19,10 @@
 				<h1 class="post-title">
 					{{ .Title }}
 				</h1>
+        {{/*Google Adsense*/}}
+        <section class="ui secondary attached segment dream-adsense">
+          {{ partial "ads.html" .}}
+        </section>
 
 				<div class="sub header">
 					<div><span><i class="calendar outline icon"></i>{{ .Date.Format "Jan 2, 2006" }}</span></div>
@@ -56,6 +60,11 @@
 				</section>
 			{{ end }}
 
+			{{/*Google Adsense*/}}
+			<section class="ui secondary attached segment dream-adsense">
+        {{ partial "ads.html" .}}
+      </section>
+
 			{{/*Licensing*/}}
 			{{ $license := lower .Params.license }}
 			{{ with $license }}					
@@ -70,8 +79,9 @@
 					{{ partial "disqus.html" . }}
 				</div>
 			{{ end }}
+
 		</div>
-	</div>
+  </div>
 {{ end }}
 
 {{ define "bodyEnd" }}

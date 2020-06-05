@@ -37,5 +37,21 @@
 		<footer class="ui bottom attached center aligned inverted segment">
 			{{ partial "footer.html" . }}
 		</footer>
-	</div>
+  </div>
 </div>
+<head>
+  <!-- MathJax -->
+  {{ if .Params.mathjax }}
+  {{ partial "mathjax_support.html" . }}
+  {{ end }}
+  <!--
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-6234026711317513",
+      enable_page_level_ads: true
+    });
+  </script>
+  <script data-ad-client="ca-pub-6234026711317513" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  -->
+</head>
